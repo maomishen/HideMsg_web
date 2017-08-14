@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideMessage", "HideMessage\HideMessage.csproj", "{F769E976-FF0C-4E23-B90E-5D8C79EE3725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideMessage.Tests", "HideMessage.Tests\HideMessage.Tests.csproj", "{C33C3309-C8EE-45CA-A446-5B826DF1B230}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F769E976-FF0C-4E23-B90E-5D8C79EE3725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F769E976-FF0C-4E23-B90E-5D8C79EE3725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F769E976-FF0C-4E23-B90E-5D8C79EE3725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F769E976-FF0C-4E23-B90E-5D8C79EE3725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33C3309-C8EE-45CA-A446-5B826DF1B230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33C3309-C8EE-45CA-A446-5B826DF1B230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33C3309-C8EE-45CA-A446-5B826DF1B230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33C3309-C8EE-45CA-A446-5B826DF1B230}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
