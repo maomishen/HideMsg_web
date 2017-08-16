@@ -1,3 +1,6 @@
 HideMessage/bin
 HideMessage/obj/Debug
 packages
+HideMessage_web/obj
+HideMessage_web/wwwroot/lib
+HideMessage_web/bin
