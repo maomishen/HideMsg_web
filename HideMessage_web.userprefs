@@ -1,11 +1,11 @@
-﻿<Properties StartupConfiguration="{5A4A551C-4BB1-4D06-B66E-7E6F3C851316}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="HideMessage_web/Startup.cs">
+﻿<Properties StartupConfiguration="{5A4A551C-4BB1-4D06-B66E-7E6F3C851316}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HideMessage_web/Controllers/DevicesSginController.cs">
     <Files>
-      <File FileName="HideMessage_web/Startup.cs" Line="39" Column="13" />
-      <File FileName="HideMessage_web/Program.cs" Line="1" Column="1" />
+      <File FileName="HideMessage_web/Controllers/DevicesSginController.cs" Line="14" Column="65" />
+      <File FileName="HideMessage_web/Startup.cs" Line="63" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
