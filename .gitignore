@@ -4,3 +4,4 @@ packages
 HideMessage_web/obj
 HideMessage_web/wwwroot/lib
 HideMessage_web/bin
+HideMessage_web/Data/DataContext.cs
