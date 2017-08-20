@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{5A4A551C-4BB1-4D06-B66E-7E6F3C851316}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="HideMessage_web/Controllers/LoginController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HideMessage_web/Data/DataContext.cs">
     <Files>
       <File FileName="HideMessage_web/Controllers/DevicesSginController.cs" Line="13" Column="72" />
       <File FileName="HideMessage_web/Startup.cs" Line="58" Column="37" />
       <File FileName="HideMessage_web/Controllers/LoginController.cs" Line="7" Column="42" />
       <File FileName="HideMessage_web/Models/User.cs" Line="3" Column="1" />
+      <File FileName="HideMessage_web/Data/DataContext.cs" Line="12" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
