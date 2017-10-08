@@ -4,7 +4,7 @@
 HideMessage_web/Data/DataContext.cs
 文件内容：
 ---
-`
+```
 using Microsoft.EntityFrameworkCore;
 using HideMessage_web.Models;
 
@@ -21,4 +21,4 @@ namespace HideMessage_web.Data
 				.UseMySql(@"Server=127.0.0.1;database=HideMsg;uid=root;pwd=password");
     }
 }
-`
+```
