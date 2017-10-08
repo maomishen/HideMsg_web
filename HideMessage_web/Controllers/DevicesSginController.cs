@@ -3,24 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.HttpOverrides;
+using HideMessage_web.Data;
+using HideMessage_web.Models;
 
 namespace HideMessage_web.Controllers
 {
 	public class DevicesSginController : Controller
 	{
         [HttpGet]
-		public String Sgin(String SginCode, String password, String cliendId)
+		public String Sgin(String SginCode, String password, String clientId)
 		{
-            //string ipAddress2 = Request.HttpContext.Request.Headers["X-Real-IP"].FirstOrDefault();
             string ipAddress = Request.Headers["X-Forwarded-For"].FirstOrDefault();
 
-            //string ipAddress = request.HttpContext.Connection.RemoteIpAddress;
-			//string ipAddress = this.Request.HttpContext.Connection.RemoteIpAddress.IsIPv4MappedToIPv6
-					//? Request.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString()
-					//: Request.HttpContext.Connection.RemoteIpAddress.ToString();
-            //string ip = Request.HttpContext.Connection.RemoteIpAddress.ToString();
-            return ipAddress + "(SginCode)" + SginCode + "(password)" + password;
+            if(SginCode == "luna" || password == "12345ssdlh") {
+                if (clientId == null || clientId == "") {
+                    return "clientId can not be found";
+                }
+				using (var context = new DataContext())
+				{
+                    Devices device = new Devices();
+                    device.device_code = SginCode;
+                    device.device_client_id = clientId;
+                    device.device_sgin_password = password;
+                    device.device_ip_v4 = ipAddress;
+                    device.device_name = "Meizu M9";
+                    context.Devices.Add(device);
+                    context.SaveChanges();
+			    }
+                return "success";
+            } else {
+                return "SginCode or password not match";
+            }
 		}
 	}
 }
