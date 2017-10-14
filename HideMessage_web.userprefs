@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{5A4A551C-4BB1-4D06-B66E-7E6F3C851316}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="HideMessage_web/Controllers/SmsGetController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HideMessage_web/Controllers/HomeController.cs">
     <Files>
-      <File FileName="HideMessage_web/Controllers/SmsGetController.cs" Line="11" Column="18" />
-      <File FileName="HideMessage_web/Logic/SendRequest.cs" Line="28" Column="50" />
-      <File FileName="HideMessage_web/Models/Messages.cs" Line="18" Column="41" />
-      <File FileName="HideMessage_web/Controllers/DevicesSginController.cs" Line="13" Column="9" />
+      <File FileName="HideMessage_web/Views/Home/Index.cshtml" Line="4" Column="39" />
+      <File FileName="HideMessage_web/Views/Shared/_Layout.cshtml" Line="9" Column="2" />
+      <File FileName="HideMessage_web/Controllers/HomeController.cs" Line="72" Column="17" />
+      <File FileName="HideMessage_web/Controllers/LoginController.cs" Line="45" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/lunagao/VisualStudioProjects/HideMsg_web/HideMessage_web/Controllers/DevicesSginController.cs" relfile="HideMessage_web/Controllers/DevicesSginController.cs" line="43" column="1" />
+      <Breakpoint file="/Users/luna/VisualStudioProjects/HideMsg_web/HideMessage_web/Controllers/DevicesSginController.cs" relfile="HideMessage_web/Controllers/DevicesSginController.cs" line="43" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.HideMessage__web PreferredExecutionTarget="MonoDevelop.Default" />

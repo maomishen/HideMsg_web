@@ -16,6 +16,19 @@ namespace HideMessage_web.Controllers
     [Authorize]
     public class HomeController : Controller
     {
+        public JsonResult Reload()
+        {
+            int user_id = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            using (var context = new DataContext())
+            {
+                var result = context.Messages
+                    .Where(m => m.message_send_user == user_id)
+                    .OrderByDescending(m => m.message_create_time)
+                    .ToList();
+                return Json(result);
+            }
+        }
+
         public IActionResult Index()
         {
             string userName = User.FindFirst(ClaimTypes.GivenName).Value;
@@ -48,16 +61,15 @@ namespace HideMessage_web.Controllers
                 messageFromFore.send_phone_id = -1;
 				context.Messages.Add(messageFromFore);
 				context.SaveChanges();
-                ViewBag.NeedAlertMessage = true;
-                ViewBag.AlertMessage = "请求已接收";
-				ViewBag.Messages = context.Messages
-					.Where(m => m.message_send_user == user_id)
-					.OrderByDescending(m => m.message_create_time)
-					.ToList();
+                //ViewBag.NeedAlertMessage = true;
+                //ViewBag.AlertMessage = "请求已接收";
+				//ViewBag.Messages = context.Messages
+					//.Where(m => m.message_send_user == user_id)
+					//.OrderByDescending(m => m.message_create_time)
+					//.ToList();
 
                 Task.Run(() => new SendRequest(messageFromFore));
-
-                return View();
+                return RedirectToAction("Index", "Home");
 			}
 		}
     }

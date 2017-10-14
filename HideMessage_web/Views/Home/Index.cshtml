@@ -20,7 +20,7 @@
 }
 
 <div class="weui-cells__title">历史信息</div>
-<div class="weui-cells">
+<div class="weui-cells scroll-view">
 	@foreach (var message in ViewBag.Messages)
         {
             <a class="weui-cell weui-cell_access" href="javascript:;">
@@ -33,23 +33,22 @@
         }
 </div>
 
-@if (ViewBag.NeedAlertMessage) 
-{
-    <div id="alert_dialog">
-        <div class="weui-mask"></div>
-        <div class="weui-dialog">
-            <div class="weui-dialog__hd"><strong class="weui-dialog__title">请求</strong></div>
-            <div class="weui-dialog__bd">@ViewBag.AlertMessage</div>
-            <div class="weui-dialog__ft">
-                <a href="javascript:deleteDialog();" class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
-            </div>
-        </div>
-    </div>
-}
-
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/dropload.js"></script>
 <script type="text/javascript">
-function deleteDialog(){
-  var dialog = document.getElementById("alert_dialog");
-  dialog.remove();
-}
+$(function() {
+    $('.scroll-view').dropload({
+        scrollArea : window,
+    	domUp : {
+                domClass   : 'dropload-up',
+                domRefresh : '<div class="dropload-refresh">↓下拉刷新</div>',
+                domUpdate  : '<div class="dropload-update">↑释放更新</div>',
+                domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中</div>'
+            },
+        loadUpFn : function(me){
+            location.reload();
+        }
+    });
+})
+
 </script>
